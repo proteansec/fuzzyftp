@@ -75,7 +75,7 @@ If we would like to use Peach, we need to follow these steps:
 ```
 4. Run Peach and wait for a crash, which will be logged and we can take a look at it later.
 ```
-# python peach.py ftp.py
+# python peach.py ftp.xml
 ```
 
 
