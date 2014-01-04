@@ -74,7 +74,7 @@ If we would like to use Peach, we need to follow these steps:
 </Agent>
 ```
 4. Run Peach and wait for a crash, which will be logged and we can take a look at it later.
-```raw
+```
 # python peach.py ftp.py
 ```
 
