@@ -75,7 +75,6 @@ If we would like to use Peach, we need to follow these steps:
 ...
 </Agent>
 ```
-
 4. Wait for a crash, which will be logged and we can take a look at it later.
 
 
