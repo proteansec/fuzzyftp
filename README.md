@@ -66,13 +66,11 @@ If we would like to use Peach, we need to follow these steps:
 2. Install Peach on computer from where we'll be testing the FTP server (can be the same computer).
 
 3. Edit the ftp.xml and change the IP address of the Peach agent as well as the command that will restart the FTP server once it becomes unavailable (on crash).
-
 ```xml
 <Agent name="AgentRemote" location="http://10.1.1.169:9001">
 <Monitor name="AgentDebugger" class="debugger.WindowsDebugEngine">
     <Param name="CommandLine" value="C:\Users\eleanor\Desktop\easyftp\ftpbasicsvr.exe /nontservice" />
 </Monitor>
-...
 </Agent>
 ```
 4. Wait for a crash, which will be logged and we can take a look at it later.
