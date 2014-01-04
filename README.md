@@ -60,11 +60,12 @@ download the fuzzers. The instructions for downloading the fuzzers:
 
 
 If we would like to use Peach, we need to follow these steps:
+
 1. Install Peach agent on computer where FTP server is running.
-2. Install Peach on computer from where we'll be testing the FTP server (can be
-the same computer).
-3. Edit the ftp.xml and change the IP address of the Peach agent as well as the
-command that will restart the FTP server once it becomes unavailable (on crash).
+
+2. Install Peach on computer from where we'll be testing the FTP server (can be the same computer).
+
+3. Edit the ftp.xml and change the IP address of the Peach agent as well as the command that will restart the FTP server once it becomes unavailable (on crash).
 
 ```xml
 <Agent name="AgentRemote" location="http://10.1.1.169:9001">
