@@ -1,4 +1,4 @@
-fuzzyftp
+Introduction
 ========
 
 I created this project as part of my thesis, where I presented computer security
@@ -12,7 +12,6 @@ server and version I was testing, the second column presents an existing vulnera
 where the third and forth columns present the numbers 0 or 1 based on whether the 
 vulnerability was found by Sulley or Peach (by using my input files defining FTP
 protocol).
-
 
 
 | FTP Server       | Known Vulnerabilities | Sulley | Peach |
@@ -51,6 +50,31 @@ Aditionally, the repository also contains input files for [Vulnserver](http://ww
 * [Peach  Vulnserver Input File](https://github.com/dejanlukan/fuzzyftp/blob/master/peach/vulnserver.xml)
 
 
+Usage 
+========
 
+To use the input files into the Sulley/Peach generic fuzzers, you first have to
+download the fuzzers. The instructions for downloading the fuzzers:
+* [Sulley](http://resources.infosecinstitute.com/sulley-fuzzing/)
+* [Peach](http://peachfuzzer.com/v3/Installation.html)
+
+
+If we would like to use Peach, we need to follow these steps:
+1. Install Peach agent on computer where FTP server is running.
+2. Install Peach on computer from where we'll be testing the FTP server (can be
+the same computer).
+3. Edit the ftp.xml and change the IP address of the Peach agent as well as the
+command that will restart the FTP server once it becomes unavailable (on crash).
+
+```xml
+<Agent name="AgentRemote" location="http://10.1.1.169:9001">
+<Monitor name="AgentDebugger" class="debugger.WindowsDebugEngine">
+    <Param name="CommandLine" value="C:\Users\eleanor\Desktop\easyftp\ftpbasicsvr.exe /nontservice" />
+</Monitor>
+...
+</Agent>
+```
+
+4. Wait for a crash, which will be logged and we can take a look at it later.
 
 
